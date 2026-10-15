@@ -110,5 +110,45 @@ footer{
     padding:20px;
 }
 
+.contact-wrapper{
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+    flex-wrap:wrap;
+}
+
+.contact-form{
+    flex:2;
+    min-width:300px;
+}
+
+.contact-info{
+    flex:1;
+    min-width:250px;
+    background:rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:10px;
+}
+
+.contact-info h3{
+    margin-bottom:15px;
+}
+
+.contact-info p{
+    margin-bottom:15px;
+}
+
+.contact-info a{
+    color:#ffcc80;
+    text-decoration:none;
+}
+
+.contact-info ul{
+    padding-left:20px;
+}
+
+.contact-info li{
+    margin-bottom:8px;
+}
 </style>
 
