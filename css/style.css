@@ -8,8 +8,12 @@ html {
     align-items: center;
     background: #0A2540;
     padding: 15px 40px;
-    position: sticky;
+
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+
     z-index: 1000;
 }
 
@@ -34,6 +38,7 @@ html {
     color: white;
     text-align: center;
     padding: 80px 20px;
+    margin-top: 80px;
 }
 
 .hero-logo {
