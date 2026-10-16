@@ -58,13 +58,19 @@ html {
     font-family: Arial, sans-serif;
 }
 
-   .logo {
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: white;
     font-size: 22px;
     font-weight: 700;
-    white-space: nowrap;
 }
 
+.logo img {
+    height: 50px;
+    width: auto;
+}
 
 body{
     line-height:1.6;
