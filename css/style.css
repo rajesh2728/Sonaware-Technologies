@@ -198,4 +198,31 @@ footer{
     margin-bottom:8px;
 }
 
+/* Mobile responsive navigation */
+@media (max-width: 768px) {
 
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-logo {
+        width: 120px;
+    }
+}
