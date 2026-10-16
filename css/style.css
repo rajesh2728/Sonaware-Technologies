@@ -1,5 +1,47 @@
 <style>
 
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0A2540;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #0078D4;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
 *{
     margin:0;
     padding:0;
