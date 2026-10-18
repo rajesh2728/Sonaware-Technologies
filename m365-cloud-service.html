@@ -1,1 +1,502 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft 365 & Cloud Consulting Services | Sonaware Technologies</title>
+  
+  <!-- Favicons -->
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/favicon.ico">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Page-Specific Styles matching accounting-service.html */
+    .service-hero {
+      margin-top: 76px;
+      background: radial-gradient(circle at 50% 20%, #1e3a5f 0%, #0A2540 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 90px 20px 80px;
+    }
+    .service-hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+    }
+    .approach-banner {
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 32px 36px;
+      margin-top: -40px;
+      margin-bottom: 60px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      position: relative;
+      z-index: 10;
+    }
+    .approach-banner h3 {
+      font-size: 1.35rem;
+      color: var(--primary-navy);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .approach-banner p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .workflow-container {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      margin-top: 40px;
+    }
+    .workflow-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+      background: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    }
+    .workflow-row.reverse {
+      direction: rtl;
+    }
+    .workflow-row.reverse .workflow-text {
+      direction: ltr;
+    }
+    .step-pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--secondary-blue);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .workflow-text h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--primary-navy);
+      margin-bottom: 12px;
+    }
+    .workflow-text p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .workflow-features {
+      list-style: none;
+      padding: 0;
+    }
+    .workflow-features li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 8px;
+      color: var(--text-main);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .workflow-features li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #10b981;
+      font-weight: 700;
+    }
+    .workflow-img-box {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+      background: var(--bg-slate);
+    }
+    .workflow-img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .impl-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .impl-item {
+      background: var(--bg-slate);
+      border: 1px solid var(--card-border);
+      border-left: 4px solid var(--secondary-blue);
+      border-radius: var(--radius-md);
+      padding: 20px 22px;
+    }
+    .impl-item h4 {
+      font-size: 1.05rem;
+      color: var(--primary-navy);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+    .impl-item p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .scope-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+      margin-top: 45px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .scope-box span {
+      font-size: 1.5rem;
+    }
+    .scope-box h4 {
+      font-size: 1rem;
+      color: var(--primary-navy);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .scope-box p {
+      font-size: 0.9rem;
+      color: #334155;
+      line-height: 1.6;
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      .service-hero h1 { font-size: 2rem; }
+      .workflow-row, .workflow-row.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        padding: 24px;
+      }
+      .workflow-row.reverse .workflow-text {
+        direction: ltr;
+      }
+      .approach-banner {
+        margin-top: -20px;
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/Rectangle.png" alt="Sonaware Technologies Logo">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="service-hero">
+    <div class="container hero-content">
+      <div class="hero-badge">ENTERPRISE CLOUD ECOSYSTEMS</div>
+      <h1>Microsoft 365 & Cloud Architecture</h1>
+      <p class="hero-subtext">
+        Secure, migrate, deploy, and manage your complete Microsoft cloud environment—from identity access and endpoint management to compliance and threat protection.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Schedule Cloud Assessment</a>
+        <a href="#features" class="btn btn-outline">Explore Core Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach Banner -->
+  <section>
+    <div class="container">
+      <div class="approach-banner">
+        <h3>Our Modern Cloud & Governance Strategy</h3>
+        <p>
+          Moving to Microsoft 365 requires more than just creating mailboxes; it demands proactive governance, zero-trust security, and tight identity controls. We assess your legacy infrastructure, configure zero-downtime cutover migrations, enforce baseline Conditional Access policies in Entra ID, standardize endpoint protection via Intune, and retain data lifecycle compliance through Microsoft Purview.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Cloud Services Grid -->
+  <section id="features" class="services-section">
+    <div class="container">
+      <div class="section-title">
+        <span class="sub-heading">Enterprise Stack</span>
+        <h2>End-to-End M365 & Cloud Capabilities</h2>
+        <p>Maximize productivity and safeguard digital assets with purpose-built administration.</p>
+      </div>
+      <div class="services-grid">
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Setup & Implementation</h3>
+          <p>Initial tenant architecture, custom DNS records (MX, SPF, DKIM, DMARC), licensing assignment, and seamless cutover migrations.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🛠️</div>
+          <h3>Administration & Management</h3>
+          <p>Ongoing admin helpdesk, license governance, user onboarding/offboarding, role-based access control (RBAC), and service health monitoring.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">✉️</div>
+          <h3>Exchange Online</h3>
+          <p>Enterprise mailbox configurations, mail routing rules, shared mailboxes, anti-spam hygiene, and zero-loss mailbox migrations.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📁</div>
+          <h3>SharePoint & OneDrive</h3>
+          <p>Structured intranet document libraries, file lifecycle governance, external sharing restrictions, and local sync deployment via OneDrive.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🛡️</div>
+          <h3>Defender for Cloud & Office 365</h3>
+          <p>Automated endpoint detection (EDR), safe links, safe attachments, anti-phishing protection, and centralized security posture tracking.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📱</div>
+          <h3>Microsoft Intune (MDM & MAM)</h3>
+          <p>Cross-platform mobile and desktop enrollment (Windows, macOS, iOS, Android), device compliance profiles, and application sandboxing.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚖️</div>
+          <h3>Microsoft Purview</h3>
+          <p>Data Loss Prevention (DLP), sensitivity labels, compliance retention policies, eDiscovery auditing, and sensitive information monitoring.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔑</div>
+          <h3>Microsoft Entra ID (Azure AD)</h3>
+          <p>Modern identity management, MFA enforcement, Conditional Access rules, Self-Service Password Reset (SSPR), and hybrid AD sync.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Architectural Pillars -->
+  <section class="about-section">
+    <div class="container">
+      <div class="section-title">
+        <span class="sub-heading">Operational Architecture</span>
+        <h2>Integrated Cloud Management Pillars</h2>
+        <p>A closer look at how we secure and optimize your Microsoft cloud infrastructure.</p>
+      </div>
+
+      <div class="workflow-container">
+        <!-- 1. Identity & Zero Trust -->
+        <div class="workflow-row">
+          <div class="workflow-text">
+            <span class="step-pill">01 / Identity & Access</span>
+            <h3>Microsoft Entra ID & Zero Trust</h3>
+            <p>Establish a secure digital perimeter around your organizational identities before granting access to corporate files and applications.</p>
+            <ul class="workflow-features">
+              <li>MFA and Passwordless sign-in governance</li>
+              <li>Conditional Access policies based on risk and location</li>
+              <li>Hybrid synchronization with on-premises Active Directory</li>
+            </ul>
+          </div>
+          <div class="workflow-img-box">
+            <img src="https://placehold.co/600x380/0A2540/ffffff?text=Entra+ID+&+Zero+Trust+Architecture" alt="Identity and Conditional Access Management">
+          </div>
+        </div>
+
+        <!-- 2. Secure Collaboration -->
+        <div class="workflow-row reverse">
+          <div class="workflow-text">
+            <span class="step-pill">02 / Modern Collaboration</span>
+            <h3>Exchange, SharePoint & OneDrive Sync</h3>
+            <p>Empower remote and hybrid teams to collaborate without risking data leakage or unmanaged document sprawl.</p>
+            <ul class="workflow-features">
+              <li>Structured SharePoint team sites and permission trees</li>
+              <li>Zero-friction cloud synchronization via OneDrive Known Folder Move</li>
+              <li>Exchange Online mail hygiene, shared inboxes, and distribution lists</li>
+            </ul>
+          </div>
+          <div class="workflow-img-box">
+            <img src="https://placehold.co/600x380/0A2540/ffffff?text=SharePoint+&+Exchange+Deployment" alt="Collaborative Cloud Workspaces">
+          </div>
+        </div>
+
+        <!-- 3. Security, Endpoints & Compliance -->
+        <div class="workflow-row">
+          <div class="workflow-text">
+            <span class="step-pill">03 / Security & Compliance</span>
+            <h3>Defender, Intune & Purview Safeguards</h3>
+            <p>Gain unified control over corporate endpoints and ensure regulatory compliance for critical enterprise information.</p>
+            <ul class="workflow-features">
+              <li>Intune Mobile Device & Application Management (MDM/MAM)</li>
+              <li>Defender real-time endpoint attack mitigation & threat remediation</li>
+              <li>Purview Data Loss Prevention (DLP) and retention audit logs</li>
+            </ul>
+          </div>
+          <div class="workflow-img-box">
+            <img src="https://placehold.co/600x380/0A2540/ffffff?text=Intune,+Defender+&+Purview+Compliance" alt="Device Compliance and Protection">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Implementation Services Section -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-title">
+        <span class="sub-heading">Lifecycle Roadmap</span>
+        <h2>Our Cloud Implementation Journey</h2>
+        <p>A proven, structured path to migrate and operate your tenant with zero business disruption.</p>
+      </div>
+
+      <div class="impl-grid">
+        <div class="impl-item">
+          <h4>1. Discovery & Readiness Audit</h4>
+          <p>Evaluating existing email systems, local storage shares, user licenses, domain health, and network bandwidth.</p>
+        </div>
+        <div class="impl-item">
+          <h4>2. Tenant & Domain Architecture</h4>
+          <p>Setting up custom domain records, DNS verification, SPF/DKIM/DMARC authentication, and administrative role baselines.</p>
+        </div>
+        <div class="impl-item">
+          <h4>3. Staged / Cutover Migration</h4>
+          <p>Migrating mailboxes, contact lists, calendar events, and shared directories with minimal-to-zero downtime.</p>
+        </div>
+        <div class="impl-item">
+          <h4>4. Intune & Endpoint Configuration</h4>
+          <p>Enrolling enterprise devices, rolling out baseline corporate configurations, and pushing business applications automatically.</p>
+        </div>
+        <div class="impl-item">
+          <h4>5. Purview & Security Hardening</h4>
+          <p>Configuring Defender policies, DLP rules, anti-phishing parameters, and Conditional Access compliance guardrails.</p>
+        </div>
+        <div class="impl-item">
+          <h4>6. Training & Continuous Admin</h4>
+          <p>Providing administrative knowledge transfer, user onboarding manuals, and SLA-backed ongoing managed helpdesk support.</p>
+        </div>
+      </div>
+
+      <!-- Scope Clarification Box -->
+      <div class="scope-box">
+        <span>ℹ️</span>
+        <div>
+          <h4>Cloud Service Scope Clarification</h4>
+          <p>Our implementation and managed cloud support covers Microsoft 365, Azure tenant administration, and modern workplace configurations. Software license purchases are subject to Microsoft's standard commercial licensing tiers, and custom API-level software development is scoped separately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section (Web3Forms) -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-title text-white">
+        <span class="sub-heading light">Get In Touch</span>
+        <h2>Elevate Your Cloud Infrastructure</h2>
+        <p>Consult with our Microsoft-certified specialists to plan your setup, migration, or security audit.</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <!-- Form -->
+        <div class="contact-form-box">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="66d0aa33-038e-4033-ad7d-0d38daa82963">
+            <input type="hidden" name="subject" value="New Inquiry: Microsoft 365 & Cloud Solution">
+            
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Rajesh Kumar" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Corporate Email</label>
+              <input type="email" id="email" name="email" placeholder="rajesh@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="text" id="phone" name="phone" placeholder="+91 98765 43210">
+            </div>
+            <div class="form-group">
+              <label for="message">Your Requirements</label>
+              <textarea id="message" name="message" rows="4" placeholder="Mention user seats, current email provider, or services required (e.g. Intune, M365 Migration, Entra ID, Purview)..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit">Submit Inquiry</button>
+          </form>
+        </div>
+
+        <!-- Contact Cards -->
+        <div class="contact-details-box">
+          <h3>Direct Contact</h3>
+          
+          <div class="info-card">
+            <div class="info-icon">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:info@sonaware.in">info@sonaware.in</a></p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">📞</div>
+            <div>
+              <strong>Phone</strong>
+              <p><a href="tel:+918850705158">+91 8850705158</a></p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div>
+              <strong>Headquarters</strong>
+              <p>Navi Mumbai, Maharashtra, India</p>
+            </div>
+          </div>
+
+          <div class="operating-hours">
+            <strong>Business Hours:</strong>
+            <p>Monday – Saturday: 9:30 AM – 6:30 PM IST</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/918850705158?text=Hello%20Sonaware%20Technologies,%20I%20would%20like%20to%20inquire%20about%20your%20Microsoft%20365%20and%20Cloud%20Services."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    <img src="images/whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p>© 2026 Sonaware Technologies. All rights reserved.</p>
+      <div class="footer-meta">
+        <a href="index.html#home">Back to Main Site</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
